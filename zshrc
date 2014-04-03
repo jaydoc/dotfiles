@@ -6,13 +6,11 @@
 autoload -U colors && colors
 zmodload -i zsh/complist
 
-# Prompt
 RSEGF=""
 LSEGF=""
 BRNCH=""
-# PROMPT="%{$bg[black]$fg_bold[white]%}%3~ %(!,%{$fg_bold[red]%}#,%{$fg_bold[green]%}\$)%{$reset_color%} "
-# export PS1="%{%K{blue}%} %{%F{black}%}%m%{%f%} %{%k%}%{%K{white}%} %{%F{blue}%}$RSEGF%{%f%}%{%k%}%{%K{white}%} %{%F{black}%}%~%{%f%} %{%k%}$RSEGF "
-# export PS1="%{%K{blue}%} %{%F{white}%}%m%{%f%}%{%k%}%{%K{white}%}%{%F{blue}%}$RSEGF%{%f%}%{%k%}%{%K{white}%} %{%F{black}%}%~%{%f%} %B%(!.%{%F{red}%}# .%{%F{blue}%}$ )%b%{%k%}%(!.%{%F{red}%}.%{%F{blue}%})%{%f%}%{%F{white}%}$RSEGF%{%f%} "
+
+# Prompt
 export PS1="%{%K{blue}%} %{%F{white}%}%~%{%f%} %(!.%{%F{red}%}# .%{%F{white}%}$ )%{%k%}%(!.%{%F{red}%}.%{%F{blue}%})%{%f%}%{%F{blue}%}$RSEGF%{%f%} "
 
 # Vi style
@@ -104,19 +102,3 @@ source $HOME/.zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # command not found hook
 source "/usr/share/doc/pkgfile/command-not-found.zsh"
-
-# homeshick
-# source "$HOME/.homesick/repos/homeshick/homeshick.sh"
-# fpath=($HOME/.homesick/repos/homeshick/completions $fpath)
-
-# coloured man pages
-man() {
-        env LESS_TERMCAP_mb=$'\E[01;31m' \
-        LESS_TERMCAP_md=$'\E[01;34m' \
-        LESS_TERMCAP_me=$'\E[0m' \
-        LESS_TERMCAP_se=$'\E[0m' \
-        LESS_TERMCAP_so=$'\E[31m' \
-        LESS_TERMCAP_ue=$'\E[0m' \
-        LESS_TERMCAP_us=$'\E[04;38m' \
-        man "$@"
-}

@@ -31,7 +31,8 @@ Xft.rgba: rgb
 URxvt.intensityStyles: false
 
 ! Cursor
-Xcursor*theme: AnArchCursor-22
+Xcursor.theme: AnArchCursor-22
+Xcursor.size:  16
 
 ! Extensions
 URxvt.perl-ext-common: keyboard-select,url-select,clipboard,unichr
