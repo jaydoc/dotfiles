@@ -1,0 +1,51 @@
+! ---------------------------------------------------
+! file:     ~/.Xresources
+! vim:fenc=utf-8:nu:ai:si:et:ts=4:sw=4:ft=xdefaults:
+! ---------------------------------------------------
+
+! Urxvt
+URxvt.cursorUnderline: false
+URxvt.cursorBlink: false
+URxvt*buffered: true
+URxvt.geometry: 80x22
+URxvt.transparent: 0
+URxvt*urgentOnBell: true
+URxvt.lineSpace: 0
+URxvt*scrollBar_right: false
+URxvt*scrollBar: false
+URxvt*borderLess: false
+URxvt*iso14755: false
+
+! Font
+URxvt*font: -misc-tamzenforpowerline-medium-r-normal--12-87-100-100-c-60-iso10646-1
+URxvt*boldFont: -misc-tamzenforpowerline-bold-r-normal--12-87-100-100-c-60-iso10646-1
+
+Xft.antialias: true
+Xft.autohint: false
+Xft.hinting: true
+Xft.hintstyle:  hintslight
+Xft.rgba: rgb
+
+! Colors
+#include "/home/serdotlinecho/.colors/solarized"
+URxvt.intensityStyles: false
+
+! Cursor
+Xcursor*theme: AnArchCursor-22
+
+! Extensions
+URxvt.perl-ext-common: keyboard-select,url-select,clipboard,unichr
+URxvt.keysym.M-Escape: perl:keyboard-select:activate
+URxvt.keysym.M-u:      perl:url-select:select_next
+URxvt.keysym.M-s:      perl:keyboard-select:search
+URxvt.keysym.M-c:      perl:clipboard:copy
+URxvt.keysym.M-v:      perl:clipboard:paste
+URxvt.keysym.M-C-v:    perl:clipboard:paste_escaped
+URxvt.url-select.launcher: iceweasel
+
+! Xautolock
+Xautolock.time: 10
+Xautolock.locker: i3lock -c 002b36
+Xautolock.killtime: 10
+Xautolock.corners: -+00
+Xautolock.cornerdelay: 10

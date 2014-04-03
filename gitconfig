@@ -1,0 +1,9 @@
+[user]
+        name = serdotlinecho
+        email = serdotlinecho@gmail.com
+[credential]
+        helper = /usr/share/git/credential/gnome-keyring/git-credential-gnome-keyring
+[core]
+        editor = vim
+[diff]
+	tool = vimdiff
