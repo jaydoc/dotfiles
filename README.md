@@ -1,8 +1,8 @@
-# Awesomewm solarized
+#### Awesomewm solarized
 
 ![aweome](awesome.png)
 
-## License
+#### License
 
             DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE
                     Version 2, December 2004
