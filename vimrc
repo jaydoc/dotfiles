@@ -33,13 +33,13 @@ if $DISPLAY =~ ":"
   set t_Co=256
 endif
 syntax on
-set background=dark
+" set background=dark
 colorscheme solarized
 
 " }}}
 " ----- vim behaviour {{{
 set wildmenu            " enhanced tab-completion shows all matching cmds in a popup menu
-" set cursorline          " highlight current line
+set cursorline          " highlight current line
 set norelativenumber    " show no relative line numbers
 set nobackup            " disable backup files (filename~)
 set noswapfile          " do not write annoying intermediate swap files
@@ -61,8 +61,8 @@ set cpoptions=ces$      " `cw` put dollar sign at the end
 " ----- search {{{
 set hlsearch            " highlight all search results
 set incsearch           " show match for partly typed search command
-" set ignorecase          " case-insensitive search
-" set smartcase           " override 'ignorecase' when pattern has upper case characters
+set ignorecase          " case-insensitive search
+set smartcase           " override 'ignorecase' when pattern has upper case characters
 
 " }}}
 " ----- custom mapping and command {{{
