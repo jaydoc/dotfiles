@@ -1,5 +1,5 @@
 -- {{{
--- awesome solarized powerline
+-- solarized powerline
 -- }}}
 
 base03  = "#002b36"

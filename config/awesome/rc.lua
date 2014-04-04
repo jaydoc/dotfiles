@@ -49,7 +49,7 @@ home = os.getenv("HOME")
 confdir = home .. "/.config/awesome"
 themes = confdir .. "/themes"
 
--- Load themes
+-- Load active themes
 active_theme = themes .. "/solarized-powerline"
 beautiful.init(active_theme .. "/theme.lua")
 
