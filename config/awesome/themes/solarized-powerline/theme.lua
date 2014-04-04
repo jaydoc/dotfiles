@@ -25,7 +25,8 @@ theme                               = {}
 theme.confdir                       = os.getenv("HOME") .. "/.config/awesome/themes/solarized-powerline"
 theme.wallpaper                     = theme.confdir .. "/wallpapers/opacity_ii.jpg"
 
-theme.font                          = "tamsyn 8"
+theme.font                          = "Tamsyn 8"
+theme.taglist_font                  = "Icons 8"
 theme.font_alt                      = "-misc-tamsyn-medium-r-normal--12-87-100-100-c-60-iso8859-1"
 theme.bg_normal                     = base03
 theme.bg_focus                      = base03
@@ -83,8 +84,8 @@ theme.tasklist_floating             = ""
 theme.tasklist_maximized_horizontal = ""
 theme.tasklist_maximized_vertical   = ""
 
+theme.layout_floating               = theme.confdir .. "/icons/floating.png"
 theme.layout_tile                   = theme.confdir .. "/icons/tile.png"
-theme.layout_tilegaps               = theme.confdir .. "/icons/tilegaps.png"
 theme.layout_tileleft               = theme.confdir .. "/icons/tileleft.png"
 theme.layout_tilebottom             = theme.confdir .. "/icons/tilebottom.png"
 theme.layout_tiletop                = theme.confdir .. "/icons/tiletop.png"
@@ -92,13 +93,8 @@ theme.layout_fairv                  = theme.confdir .. "/icons/fairv.png"
 theme.layout_fairh                  = theme.confdir .. "/icons/fairh.png"
 theme.layout_spiral                 = theme.confdir .. "/icons/spiral.png"
 theme.layout_dwindle                = theme.confdir .. "/icons/dwindle.png"
-theme.layout_floating               = theme.confdir .. "/icons/floating.png"
 
 theme.arrl                          = theme.confdir .. "/icons/arrl.png"
-theme.arrl_dl                       = theme.confdir .. "/icons/arrl_dl.png"
-theme.arrl_ld                       = theme.confdir .. "/icons/arrl_ld.png"
-theme.arrr_rd                       = theme.confdir .. "/icons/arrr_rd.png"
-theme.arrr_dr                       = theme.confdir .. "/icons/arrr_dr.png"
 theme.arrr                          = theme.confdir .. "/icons/arrr.png"
 theme.arr0                          = theme.confdir .. "/icons/arr0.png"
 theme.arr1                          = theme.confdir .. "/icons/arr1.png"

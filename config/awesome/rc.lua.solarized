@@ -79,9 +79,10 @@ local layouts =
 }
 -- }}}
 
+-- names = { "1", "2", "3", "4"},
 -- {{{ Tag list
 tags = {
-    names = { "Ƅ", "ƀ", "ƈ", "Ɗ" },
+    names = { "Ƅ", "ƀ", "Ɗ", "ƈ" },
     layout = { layouts[2], layouts[5], layouts[2], layouts[1]}
 }
 for s = 1, screen.count() do
