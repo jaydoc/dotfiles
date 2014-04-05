@@ -37,13 +37,14 @@ base01 = "#586e75"
 base02 = "#073642"
 
 -- Default modkey
-modkey = "Mod4"
-altkey = "Mod1"
-terminal = "urxvtc"
-editor = os.getenv("EDITOR") or "nano"
-editor_cmd = terminal .. " -e " .. editor
-volume = terminal .. " -name 'alsamixer' -e alsamixer -c 0"
-fm_cli = terminal .. " -name 'ranger' -e ranger"
+modkey      = "Mod4"
+altkey      = "Mod1"
+terminal    = "urxvtc"
+editor      = os.getenv("EDITOR") or "nano"
+editor_cmd  = terminal .. " -e " .. editor
+volume      = terminal .. " -name 'alsamixer' -e alsamixer -c 0"
+fm_cli      = terminal .. " -name 'ranger' -e ranger"
+ncm         = terminal .. " -name 'ncmpcpp' -e ncmpcpp"
 
 home = os.getenv("HOME")
 confdir = home .. "/.config/awesome"
@@ -81,8 +82,8 @@ local layouts =
 
 -- {{{ Tag list
 tags = {
-    names = { "Ƅ", "ƀ", "ƈ", "Ɗ" },
-    layout = { layouts[2], layouts[5], layouts[2], layouts[1]}
+    names = { "Ƅ", "ƀ", "Ɵ", "ƈ", "Ɗ" },
+    layout = { layouts[2], layouts[5], layouts[2], layouts[6], layouts[1] }
 }
 for s = 1, screen.count() do
     tags[s] = awful.tag(tags.names, s, tags.layout)
@@ -119,7 +120,7 @@ myawesomemenu = {
 }
 
 mymainmenu = awful.menu({ items = { { "awesome", myawesomemenu, beautiful.awesome_icon },
-                                    { "urxvtc", terminal },
+                                    { "ncmpcpp", ncm },
                                     { "ranger", fm_cli },
                                     { "alsamixer", volume}
                                   }
