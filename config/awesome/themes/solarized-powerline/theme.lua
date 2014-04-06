@@ -101,4 +101,8 @@ theme.arr1                          = theme.confdir .. "/icons/arr1.png"
 theme.arr2                          = theme.confdir .. "/icons/arr2.png"
 theme.arr3                          = theme.confdir .. "/icons/arr3.png"
 
+-- lain related
+theme.useless_gap_width             = 5
+theme.layout_uselesstile            = theme.confdir .. "/icons/uselesstile.png"
+
 return theme
