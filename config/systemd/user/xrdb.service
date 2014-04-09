@@ -1,0 +1,11 @@
+[Unit]
+Description=Load Xresources
+Requires=xorg.target
+After=xorg.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/xrdb -merge %h/.Xresources
+
+[Install]
+WantedBy=mystuff.target

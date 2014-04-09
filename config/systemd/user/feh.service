@@ -1,0 +1,11 @@
+[Unit]
+Description=Feh Image Viewer
+Requires=xorg.target
+After=xorg.target
+
+[Service]
+Type=oneshot
+ExecStart=/bin/sh "%h/.fehbg"
+
+[Install]
+WantedBy=xorg.target
