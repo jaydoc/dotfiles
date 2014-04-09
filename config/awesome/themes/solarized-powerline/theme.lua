@@ -23,7 +23,7 @@ green   = "#859900"
 theme                               = {}
 
 theme.confdir                       = os.getenv("HOME") .. "/.config/awesome/themes/solarized-powerline"
-theme.wallpaper                     = theme.confdir .. "/wallpapers/opacity_ii.jpg"
+theme.wallpaper                     = theme.confdir .. "/wallpapers/zionello.jpg"
 
 theme.font                          = "Tamsyn 8"
 theme.taglist_font                  = "Icons 8"
@@ -41,6 +41,7 @@ theme.border_normal                 = base02
 theme.border_focus                  = base01
 theme.border_marked                 = blue
 theme.taglist_fg_focus              = base3
+theme.taglist_bg_focus              = base02
 theme.tasklist_fg_focus             = base1
 theme.menu_width                    = "110"
 theme.menu_border_width             = "0"
