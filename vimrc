@@ -1,6 +1,6 @@
 " ------------------------------------------------------------------------
 " file:     ~/.vimrc
-" authtor:  serdotlinecho
+" author:  serdotlinecho
 " vim:fenc=utf-8:ai:si:et:ts=4:sw=4:fdm=marker:fdn=1:ft=vim:
 " ------------------------------------------------------------------------
 
@@ -26,6 +26,7 @@ Bundle 'tomtom/tcomment_vim'
 Bundle "MarcWeber/vim-addon-mw-utils"
 Bundle "tomtom/tlib_vim"
 Bundle "mbbill/undotree"
+Bundle 'flazz/vim-colorschemes'
 
 " }}}
 " ----- highlighting {{{
@@ -33,8 +34,9 @@ if $DISPLAY =~ ":"
   set t_Co=256
 endif
 syntax on
-" set background=dark
-colorscheme solarized
+set background=dark
+let g:hybrid_use_Xresources = 1
+colorscheme hybrid
 
 " }}}
 " ----- vim behaviour {{{
@@ -141,7 +143,7 @@ nmap <silent> <Leader><space> :call <SID>StripTrailingWhitespace()<CR>
 " }}}
 " ----- settings for plugins {{{
 " vim-airline settings
-" let g:airline_theme = 'solarized'
+let g:airline_theme = 'powerlineish'
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#show_buffers = 0
 let g:airline#extensions#tabline#tab_nr_type = 1
