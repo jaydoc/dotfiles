@@ -135,7 +135,6 @@ space2 = markup.font("Tamsyn 2", " ")
 white  = "#93A1A1"
 yellow = "#F0C674"
 red    = "#FF6C5C"
-green  = "#B5BD68"
 
 -- Textclock
 clockicon = wibox.widget.imagebox(beautiful.widget_clock)
@@ -174,7 +173,7 @@ batwidget = lain.widgets.bat({
             baticon:set_image(beautiful.widget_ac)
         return
         elseif bat_now.status == "Charging" then
-            widget:set_markup(markup(green, space2 ..  bat_now.perc .. "% "))
+            widget:set_markup(markup(red, space2 ..  bat_now.perc .. "% "))
             baticon:set_image(beautiful.widget_ac)
         elseif tonumber(bat_now.perc) <= 30 then
             widget:set_markup(markup(red, space2 .. bat_now.perc .. "% "))
