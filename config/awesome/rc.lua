@@ -132,11 +132,14 @@ mylauncher = awful.widget.launcher({ image = beautiful.awesome_icon,
 -- {{{ Wibox
 markup = lain.util.markup
 space2 = markup.font("Tamsyn 2", " ")
-space3 = markup.font("Tamsyn 3", " ")
+white  = "#93A1A1"
+yellow = "#F0C674"
+red    = "#FF6C5C"
+green  = "#B5BD68"
 
 -- Textclock
 clockicon = wibox.widget.imagebox(beautiful.widget_clock)
-mytextclock = awful.widget.textclock(markup("#93a1a1", space2 .. "%I:%M %p" .. space2))
+mytextclock = awful.widget.textclock(markup(white, space2 .. "%I:%M %p" .. space2))
 
 -- Calendar
 lain.widgets.calendar:attach(mytextclock, { font_size = 8 })
@@ -157,7 +160,7 @@ volumewidget = lain.widgets.alsa({
         else
             volicon:set_image(beautiful.widget_vol)
         end
-        widget:set_markup(markup("#93a1a1", space2 .. volume_now.level .. "% "))
+        widget:set_markup(markup(white, space2 .. volume_now.level .. "% "))
     end
 })
 
@@ -167,26 +170,25 @@ batwidget = lain.widgets.bat({
     battery = "BAT1",
     settings = function()
         if bat_now.watt == "N/A" then
-            widget:set_markup(markup("#93a1a1", space2 .. "AC "))
+            widget:set_markup(markup(white, space2 .. "AC "))
             baticon:set_image(beautiful.widget_ac)
         return
         elseif bat_now.status == "Charging" then
-            bat_now.perc = bat_now.perc .. "% "
+            widget:set_markup(markup(green, space2 ..  bat_now.perc .. "% "))
             baticon:set_image(beautiful.widget_ac)
         elseif tonumber(bat_now.perc) <= 30 then
-            bat_now.perc = bat_now.perc .. "% "
+            widget:set_markup(markup(red, space2 .. bat_now.perc .. "% "))
             baticon:set_image(beautiful.widget_bat_low)
         elseif tonumber(bat_now.perc) <= 50 then
-            bat_now.perc = bat_now.perc .. "% "
+            widget:set_markup(markup(yellow, space2 .. bat_now.perc .. "% "))
             baticon:set_image(beautiful.widget_bat_half)
         elseif tonumber(bat_now.perc) <= 90 then
-            bat_now.perc = bat_now.perc .. "% "
+            widget:set_markup(markup(white, space2 ..  bat_now.perc .. "% "))
             baticon:set_image(beautiful.widget_bat_med)
         else
-            bat_now.perc = bat_now.perc .. "% "
+            widget:set_markup(markup(white, space2 ..  bat_now.perc))
             baticon:set_image(beautiful.widget_bat)
         end
-        widget:set_markup(markup("#93a1a1", space2 ..  bat_now.perc))
     end
 })
 
@@ -194,7 +196,7 @@ batwidget = lain.widgets.bat({
 memicon = wibox.widget.imagebox(beautiful.widget_mem)
 memwidget = lain.widgets.mem({
     settings = function()
-        widget:set_markup(markup("#93a1a1", space2 .. mem_now.used .. "M "))
+        widget:set_markup(markup(white, space2 .. mem_now.used .. "M "))
     end
 })
 
@@ -202,7 +204,7 @@ memwidget = lain.widgets.mem({
 tempicon = wibox.widget.imagebox(beautiful.widget_temp)
 tempwidget = lain.widgets.temp({
     settings = function()
-        widget:set_markup(markup("#93a1a1", space2 .. coretemp_now .. "°C "))
+        widget:set_markup(markup(white, space2 .. coretemp_now .. "°C "))
     end
 })
 
@@ -211,7 +213,7 @@ cpuicon = wibox.widget.imagebox()
 cpuicon:set_image(beautiful.widget_cpu)
 cpuwidget = lain.widgets.cpu({
     settings = function()
-        widget:set_markup(markup("#93a1a1", space2 .. cpu_now.usage .. "% "))
+        widget:set_markup(markup(white, space2 .. cpu_now.usage .. "% "))
     end
 })
 
@@ -234,8 +236,8 @@ netdowninfo = wibox.widget.textbox()
 netupicon = wibox.widget.imagebox(beautiful.widget_netup)
 netupinfo = lain.widgets.net({
     settings = function()
-        widget:set_markup(markup("#93a1a1", space2 .. net_now.sent .. " "))
-        netdowninfo:set_markup(markup("#93a1a1", space2 .. net_now.received .. " "))
+        widget:set_markup(markup(white, space2 .. net_now.sent .. " "))
+        netdowninfo:set_markup(markup(white, space2 .. net_now.received .. " "))
     end
 })
 
