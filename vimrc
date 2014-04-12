@@ -4,7 +4,7 @@
 " vim:fenc=utf-8:ai:si:et:ts=4:sw=4:fdm=marker:fdn=1:ft=vim:
 " ------------------------------------------------------------------------
 
-" ----- general {{{
+" ----- general settings {{{
 set nocompatible            " we're running Vim, not Vi!
 filetype plugin indent on   " filetype detection and settings
 set encoding=utf-8          " we like utf-8
@@ -89,6 +89,9 @@ imap <C-v> <ESC>"+pa
 " toggle line numbers
 nnoremap <leader>n :set invnu<CR>
 
+" paste togle button
+set pastetoggle=<F3>
+
 " clear the search buffer when hitting return
 nnoremap <CR> :nohlsearch<cr>
 
@@ -101,6 +104,15 @@ nnoremap <up> <nop>
 nnoremap <down> <nop>
 nnoremap <left> <nop>
 nnoremap <right> <nop>
+inoremap <up> <nop>
+inoremap <down> <nop>
+inoremap <left> <nop>
+inoremap <right> <nop>
+
+" turn off F1 as HELP key
+inoremap <F1> <ESC>
+nnoremap <F1> <ESC>
+vnoremap <F1> <ESC>
 
 " easier split window navigation
 nnoremap <C-j> <C-w>j
@@ -108,15 +120,12 @@ nnoremap <C-k> <C-w>k
 nnoremap <C-h> <C-w>h
 nnoremap <C-l> <C-w>l
 
-" ROT13
-map <F12> ggVGg?
+" NERDtree
+nmap <F1> :NERDTreeToggle<CR>
+nmap <leader>nf :NERDTreeFind<CR>
 
 " Undotree
-nmap <leader>u :UndotreeToggle <CR>
-
-" NERDtree
-nmap <leader>d :NERDTreeToggle <CR>
-nmap <leader>nf :NERDTreeFind <CR>
+nnoremap <F2> :UndotreeToggle<CR>
 
 " trailing whitespace detection
 highlight ExtraWhitespace ctermbg=red guibg=red
@@ -139,6 +148,8 @@ function! <SID>StripTrailingWhitespace()
 endfunction
 nmap <silent> <Leader><space> :call <SID>StripTrailingWhitespace()<CR>
 
+" ROT13
+map <F12> ggVGg?
 
 " }}}
 " ----- settings for plugins {{{
