@@ -1,4 +1,10 @@
-## License
+Screenshot
+----------
+
+.. image:: http://i.imgur.com/RIcs7oB.png
+
+License
+-------
 
             DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE
                     Version 2, December 2004
