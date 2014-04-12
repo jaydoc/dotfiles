@@ -26,8 +26,8 @@ Xft.rgba:       rgb
 Xft.hinting:    true
 Xft.hintstyle:  hintslight
 
-URxvt*font: -misc-tamzenforpowerline-medium-r-normal--12-87-100-100-c-60-iso10646-1
-URxvt*boldFont: -misc-tamzenforpowerline-bold-r-normal--12-87-100-100-c-60-iso10646-1
+URxvt.font: -misc-tamzenforpowerline-medium-r-normal--12-87-100-100-c-60-iso10646-1
+URxvt.boldFont: -misc-tamzenforpowerline-bold-r-normal--12-87-100-100-c-60-iso10646-1
 
 ! Cursor
 Xcursor.theme: AnArchCursor-22
@@ -46,7 +46,7 @@ URxvt.matcher.button:       1
 
 ! Xautolock
 Xautolock.time: 10
-Xautolock.locker: i3lock -c 1C1C1C
-Xautolock.killtime: 10
+Xautolock.locker: i3lock-wrapper
+! Xautolock.killtime: 10
 Xautolock.corners: -+00
 Xautolock.cornerdelay: 10
