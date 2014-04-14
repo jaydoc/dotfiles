@@ -31,7 +31,6 @@ URxvt.boldFont: -misc-tamzenforpowerline-bold-r-normal--12-87-100-100-c-60-iso10
 
 ! Cursor
 Xcursor.theme: AnArchCursor-22
-Xcursor.size:  16
 
 ! Extensions
 URxvt.perl-ext-common:      url-select,clipboard,matcher,unichr
