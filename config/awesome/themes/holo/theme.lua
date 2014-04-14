@@ -6,7 +6,7 @@
 theme                               = {}
 
 theme.confdir                       = os.getenv("HOME") .. "/.config/awesome/themes/holo"
-theme.wallpaper                     = theme.confdir .. "/wall.png"
+theme.wallpaper                     = theme.confdir .. "/wall.jpg"
 
 theme.font                          = "Tamsyn 8"
 theme.taglist_font                  = "Icons 8"
