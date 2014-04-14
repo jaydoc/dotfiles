@@ -246,7 +246,7 @@ mpdicon = wibox.widget.imagebox(beautiful.widget_note)
 mpdwidget = lain.widgets.mpd({
     settings = function()
         mpd_notification_preset = {
-            title = "▶ Now playing",
+            title = "Now playing",
             timeout = 6,
             text = string.format("%s - %s\n%s", mpd_now.artist,
                    mpd_now.album, mpd_now.title)
@@ -430,7 +430,7 @@ globalkeys = awful.util.table.join(
     awful.key({ modkey }, "Left",  function () awful.client.moveresize(-20,   0,   0,   0) end),
     awful.key({ modkey }, "Right", function () awful.client.moveresize( 20,   0,   0,   0) end),
 
-    -- Dmenu
+    -- dmenu2
     awful.key({ modkey }, "p", function ()
     awful.util.spawn( "dmenu_run -i -y 14 -q -l 5 -w 250 -h 15 -nb '" .. beautiful.menu_bg_normal ..
             "' -fn '" .. beautiful.font_alt ..
@@ -443,10 +443,21 @@ globalkeys = awful.util.table.join(
     awful.key({ altkey, }, "Tab", titlin),
 
     -- Volume keyboard control
-    awful.key({ }, "XF86AudioRaiseVolume", function ()
-            awful.util.spawn("amixer -D pulse sset Master '2%+'", false) end),
-    awful.key({ }, "XF86AudioLowerVolume", function ()
-            awful.util.spawn("amixer -D pulse sset Master '2%-'", false) end))
+    awful.key({ }, "XF86AudioRaiseVolume",
+    function ()
+        awful.util.spawn("amixer -D pulse sset Master '2%+'")
+        volumewidget.update()
+    end),
+    awful.key({ }, "XF86AudioLowerVolume",
+    function ()
+        awful.util.spawn("amixer -D pulse sset Master '2%-'")
+        volumewidget.update()
+    end),
+    awful.key({ }, "XF86AudioMute",
+    function ()
+        awful.util.spawn("amixer set Master playback toggle")
+        volumewidget.update()
+    end))
 
 
 clientkeys = awful.util.table.join(
