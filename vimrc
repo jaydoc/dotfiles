@@ -74,6 +74,9 @@ let mapleader = ","
 " reload .vimrc
 map <silent> <leader>v :source ~/.vimrc<CR>:filetype detect<CR>:exe ":echo 'Source completed!'"<CR>
 
+" Exit insert mode
+inoremap jj <esc>
+
 " allows writing to files with root priviledges
 " command W :execute ':silent w !sudo tee % > /dev/null' | :edit!
 cmap w!! w !sudo tee % > /dev/null
@@ -91,6 +94,9 @@ nnoremap <leader>n :set invnu<CR>
 
 " paste togle button
 set pastetoggle=<F3>
+
+" Toggle fold
+nnoremap <space> za
 
 " clear the search buffer when hitting return
 nnoremap <CR> :nohlsearch<cr>
