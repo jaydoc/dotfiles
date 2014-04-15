@@ -411,9 +411,6 @@ globalkeys = awful.util.table.join(
     awful.key({ modkey, "Control" }, "r", awesome.restart),
     awful.key({ modkey, "Shift"   }, "q", awesome.quit),
 
-    -- User programs
-    awful.key({ altkey,           }, "m",     function () awful.util.spawn(ncm) end),
-
     awful.key({ modkey,           }, "l",     function () awful.tag.incmwfact( 0.05)    end),
     awful.key({ modkey,           }, "h",     function () awful.tag.incmwfact(-0.05)    end),
     awful.key({ modkey, "Shift"   }, "h",     function () awful.tag.incnmaster( 1)      end),
@@ -447,21 +444,21 @@ globalkeys = awful.util.table.join(
 
     -- Volume keyboard control
     awful.key({ }, "XF86AudioRaiseVolume",
-        function ()
-            awful.util.spawn("amixer -D pulse sset Master '2%+'")
-            volumewidget.update()
-        end),
+    function ()
+        awful.util.spawn("amixer -D pulse sset Master '2%+'")
+        volumewidget.update()
+    end),
     awful.key({ }, "XF86AudioLowerVolume",
-        function ()
-            awful.util.spawn("amixer -D pulse sset Master '2%-'")
-            volumewidget.update()
-        end),
+    function ()
+        awful.util.spawn("amixer -D pulse sset Master '2%-'")
+        volumewidget.update()
+    end),
     awful.key({ }, "XF86AudioMute",
-        function ()
-            awful.util.spawn("amixer set Master playback toggle")
-            volumewidget.update()
-        end)
-)
+    function ()
+        awful.util.spawn("amixer set Master playback toggle")
+        volumewidget.update()
+    end))
+
 
 clientkeys = awful.util.table.join(
     awful.key({ modkey,           }, "f",      function (c) c.fullscreen = not c.fullscreen  end),
