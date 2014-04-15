@@ -150,7 +150,6 @@ volumewidget = lain.widgets.alsa({
     settings = function()
         if volume_now.status == "off" then
             widget:set_markup(markup(red, space2 .. volume_now.level .. "M "))
-            -- volume_now.level = volume_now.level .. "M"
             volicon:set_image(beautiful.widget_vol_mute)
         elseif tonumber(volume_now.level) == 0 then
             widget:set_markup(markup(white, space2 .. volume_now.level .. "% "))
@@ -461,7 +460,14 @@ globalkeys = awful.util.table.join(
     function ()
         awful.util.spawn("amixer set Master playback toggle")
         volumewidget.update()
-    end))
+    end),
+
+    -- Printscreens
+    awful.key({ }, "Print",
+    function ()
+        awful.util.spawn("scrot -e 'mv $f ~/screenshots/ 2>/dev/null'")
+    end)
+)
 
 
 clientkeys = awful.util.table.join(
