@@ -576,9 +576,10 @@ awful.rules.rules = {
                      focus = awful.client.focus.filter,
                      raise = true,
                      keys = clientkeys,
-                     buttons = clientbuttons, } },
+                     buttons = clientbuttons,
+                     size_hints_honor = false } },
     -- urxvt gaps fixes
-    { rule = { name = "urxvt" }, properties = { size_hints_honor = false } },
+    -- { rule = { name = "urxvt" }, properties = { size_hints_honor = false } },
     -- floating apps
     { rule_any = { class = {"mpv", "MPlayer", "pinentry", "feh", "Vlc"} },
       properties = { floating = true } },
@@ -605,11 +606,9 @@ client.connect_signal("manage", function (c)
         end
     end
 
--- end)
-
-local titlebars_enabled = true
+    local titlebars_enabled = true
     if titlebars_enabled and (c.type == "normal" or c.type == "dialog") then
-        -- buttons for the titlebar
+        -- Buttons for the titlebar
         local buttons = awful.util.table.join(
                 awful.button({ }, 1, function()
                     client.focus = c

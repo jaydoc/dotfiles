@@ -575,9 +575,10 @@ awful.rules.rules = {
                      focus = awful.client.focus.filter,
                      raise = true,
                      keys = clientkeys,
-                     buttons = clientbuttons, } },
+                     buttons = clientbuttons,
+                     size_hints_honor = false } },
     -- urxvt gaps fixes
-    { rule = { name = "urxvt" }, properties = { size_hints_honor = false } },
+    -- { rule = { name = "urxvt" }, properties = { size_hints_honor = false } },
     -- floating apps
     { rule_any = { class = {"mpv", "MPlayer", "pinentry", "feh", "Vlc"} },
       properties = { floating = true } },
