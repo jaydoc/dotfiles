@@ -9,6 +9,10 @@ With titlebar
 -------------
 .. image:: http://i.imgur.com/nqrXSW7.png
 
+With top and bottom bar
+-----------------------
+.. image:: http://i.imgur.com/XEH774F.png
+
 i3lock
 ------
 .. image:: http://i.imgur.com/AOZK6k6.png
