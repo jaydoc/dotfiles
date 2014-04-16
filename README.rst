@@ -1,6 +1,7 @@
 Screenshot
 ----------
 
+.. image:: http://i.imgur.com/nqrXSW7.png
 .. image:: http://i.imgur.com/RIcs7oB.png
 
 License
