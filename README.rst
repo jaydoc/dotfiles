@@ -1,13 +1,16 @@
 Screenshots
------------
+===========
 
-== No titlebar
+No titlebar
+-----------
 .. image:: http://i.imgur.com/bmN2V0d.png
 
-== With titlebar
+With titlebar
+-------------
 .. image:: http://i.imgur.com/nqrXSW7.png
 
-== i3lock
+i3lock
+------
 .. image:: http://i.imgur.com/AOZK6k6.png
 
 License
