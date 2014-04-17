@@ -17,6 +17,10 @@ i3lock
 ------
 .. image:: http://i.imgur.com/AOZK6k6.png
 
+Awesomewm with solarized colorscheme
+------------------------------------
+.. image:: http://i.imgur.com/6k6Q3e0.png
+
 License
 -------
 
