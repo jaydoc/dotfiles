@@ -1,5 +1,5 @@
 -- {{{
--- solarized powerline
+-- solarized powerarrow
 -- }}}
 
 base03  = "#002b36"
@@ -22,7 +22,7 @@ green   = "#859900"
 
 theme                               = {}
 
-theme.confdir                       = os.getenv("HOME") .. "/.config/awesome/themes/solarized-powerline"
+theme.confdir                       = os.getenv("HOME") .. "/.config/awesome/themes/solarized-powerarrow"
 theme.wallpaper                     = theme.confdir .. "/wallpapers/zionello.jpg"
 
 theme.font                          = "Tamsyn 8"
