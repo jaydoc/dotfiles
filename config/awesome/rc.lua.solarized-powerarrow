@@ -44,8 +44,10 @@ editor_cmd  = terminal .. " -e " .. editor
 volume      = terminal .. " -name 'alsamixer' -e alsamixer -c 0"
 fm_cli      = terminal .. " -name 'ranger' -e ranger"
 ncm         = terminal .. " -name 'ncmpcpp' -e ncmpcpp"
+
 base01 = "#586e75"
 base02 = "#073642"
+naughty.config.defaults.border_color = base01
 
 home = os.getenv("HOME")
 confdir = home .. "/.config/awesome"
