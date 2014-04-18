@@ -1,0 +1,142 @@
+" -----------------------------------------------
+" file: ~/.vimperatorrc
+" author: serdotlinecho
+" vim:fdm=marker:ft=vimperator:
+" -----------------------------------------------
+
+" ----- general settings {{{
+colorscheme solarized_dark
+set titlestring=Iceweasel
+set status=input,location,bookmark,history,position
+set defsearch=ge
+set hintchars=hjklasdfgyuiopqwertnmzxcvb
+set noautocomplete
+set hlsearch
+set incsearch
+set ignorecase
+set smartcase
+set visualbell
+set popups=tab
+set focuscontent
+set noscrollbars
+
+" always show close buttons
+set! browser.tabs.tabClipWidth=50
+
+" disable accesskey
+set! ui.key.generalAccessKey=0
+
+" disable smooth scrolling
+set! general.smoothScroll=false
+
+" disable tab animation
+set! browser.tabs.animate=false
+
+" donottrack
+set! privacy.donottrackheader.enabled=true
+
+" always show http
+set! browser.urlbar.trimURLs=false
+
+" disable IPv6
+set! network.dns.disableIPv6=true
+
+" disable geolocation
+set! geo.enabled=false
+
+" flash ask to activate
+set! plugin.state.flash=1
+
+" longer interval to save session
+set! browser.sessionstore.interval=300000
+
+" hide annoying plugin toolbar
+set! plugins.hide_infobar_for_blocked_plugin=true
+set! plugins.hide_infobar_for_outdated_plugin=true
+
+" tab re-ordering without preview
+set! nglayout.enable_drag_images=false
+
+" clear download list when Firefox exits
+set! browser.download.manager.retention=1
+
+" when open new tab, show blank page
+set! browser.newtab.url=about:blank
+
+" make caret mode's bar more visible
+set! ui.caretWidth=1
+set! ui.caretBlinkTime=1000
+
+" }}}
+" ----- custom key mapping {{{
+let mapleader = ","
+
+" switching tabs
+nnoremap J gt
+nnoremap K gT
+
+" move current tab left/right
+" nnoremap <silent> <C-l> :tabmove! +1<CR>
+" nnoremap <silent> <C-h> :tabmove! -1<CR>
+map <S-Right> :tabmove! +1<CR>
+map <S-Left> :tabmove! -1<CR>
+
+" scroll faster
+" nnoremap j 5j
+" nnoremap k 5k
+
+" list and choose tabs
+"nnoremap b :buffer!<Space><Tab>
+
+" clear the search buffer when hitting return
+nnoremap <Leader>s :nohlsearch<cr>
+
+" use :wqa or :xa instead
+nnoremap ZZ <Nop>
+
+" disable refresh using F5
+nnoremap <F5> <Nop>
+
+" disable next and previous key
+noremap <C-p> <Nop>
+noremap <C-n> <Nop>
+
+" show page information
+"nnoremap <C-p> g<C-g>
+
+" open bookmarks
+nnoremap <Leader>B :bmarks<Space>
+
+" disable Ctrl+Q
+nnoremap <C-q> <Nop>
+
+" disable open web location shortcut
+nnoremap <C-l> <Nop>
+imap <C-l> <Nop>
+
+" highlight text on insert mode
+imap <C-f> <A-a>
+
+" emacs edit keybindings
+cnoremap <C-a> <Home>
+cnoremap <C-e> <End>
+cnoremap <C-d> <Del>
+cnoremap <C-f> <Right>
+cnoremap <C-b> <Left>
+
+" }}}
+" ----- settings for plugin {{{
+" smooziee.js
+let g:smooziee_scroll_amount="80"
+let g:smooziee_scroll_interval="20"
+
+" }}}
+" ----- commands and functions {{{
+" play youtube videos with mpv
+command! -nargs=0 mpv :execute "!urxvt -e mpv --quvi-format=360p \""+content.location.href+"\" "
+
+" }}}
+" ----- source vimperator {{{
+nnoremap <silent> <Leader>v :source ~/.vimperatorrc<CR>:echo<Space>"source completed."<CR>
+silent! source $HOME/.vimperatorrc.local
+
