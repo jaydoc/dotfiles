@@ -174,13 +174,13 @@ baticon = wibox.widget.imagebox(beautiful.widget_battery)
 batwidget = wibox.widget.background(lain.widgets.bat({
     battery = "BAT1",
     settings = function()
-        if bat_now.watt == "N/A" or bat_now.perc == "100" then
+        if bat_now.watt == "N/A" then
             widget:set_markup(markup("#eee8d5", "AC "))
             baticon:set_image(beautiful.widget_ac)
             return
         elseif bat_now.status == "Charging" then
-            bat_now.perc = bat_now.perc .. "% "
-            baticon:set_image(beautiful.widget_ac)
+            bat_now.perc = bat_now.perc .. "+ "
+            baticon:set_image(beautiful.widget_bat_charge)
         elseif tonumber(bat_now.perc) <= 30 then
             bat_now.perc = bat_now.perc .. "% "
             baticon:set_image(beautiful.widget_bat_low)
