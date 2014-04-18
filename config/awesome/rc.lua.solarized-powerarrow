@@ -141,7 +141,7 @@ green   = "#B7CE42"
 
 -- Textclock
 clockicon = wibox.widget.imagebox(beautiful.widget_clock)
-mytextclock = awful.widget.textclock(markup("#6c71c4", "%I:%M %p" ))
+mytextclock = awful.widget.textclock(markup("#6c71c4", "%I:%M %p" .. space2))
 
 -- Calendar
 lain.widgets.calendar:attach(mytextclock, { font_size = 8 })
