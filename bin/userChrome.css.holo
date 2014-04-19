@@ -1,0 +1,65 @@
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+/* do not remove the @namespace line -- no one knows what it does */
+
+/* cleaning up the interface ... */
+/* #nav-bar, */
+/* #reload-button, */
+/* #unified-back-forward-button, */
+/* .searchbar-engine-image, */
+/* .searchbar-engine-button, */
+/* .search-go-container, */
+/* .searchbar-dropmarker-image, */
+/* .search-go-button, */
+/* #plugins-notification-icon, */
+/* #page-proxy-favicon, */
+/* #star-button */
+/* .tab-icon-image:not([pinned]), */
+.new-tab-button,
+.tabs-newtab-button,
+.tab-throbber,
+#appmenu-toolbar-button > .toolbarbutton-text {
+    display: none !important;
+}
+
+#TabsToolbar {
+height: 16px !important;
+}
+
+/* removing annoying tab gradients */
+tab {
+    background: none !important;
+}
+
+/* tab formatting */
+.tabbrowser-tabs *|tab {
+    font-family: tamsyn !important;
+    font-size: 8pt !important;
+    min-height: 0px !important;
+    height: 10px !important;
+    width: 12px !important;
+    min-width: 8px !important ;
+    padding: 0px 5px 0px 5px !important;
+}
+
+/* making sure pins don't dissapear, while making stupid icons contextual to tabs only*/
+.tabbrowser-tabs:not([pinned]) tab{
+    text-align: center !important;
+    border: 1px solid !important;
+    border-radius: 0px !important;
+}
+
+/* inactive tabs */
+.tabbrowser-tabs tab:not([selected="true"]) {
+    opacity:0.5;
+    border: none !important;
+}
+
+/* active tab */
+.tabbrowser-tabs tab[selected="true"] {
+    color: #ffffff !important;
+    border-top: none !important;
+    border-bottom: 2px solid #0099CC !important;
+    border-left: none !important;
+    border-right: none !important;
+}
+

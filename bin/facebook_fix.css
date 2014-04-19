@@ -1,0 +1,15 @@
+@-moz-document domain(facebook.com) {
+
+/* Hide ads from right column */
+    DIV._5vw9 {
+        display: none !important;
+    }
+
+
+/* Workaround for Firefox/Iceweasel higher cpu usage on Facebook */
+/* https://bernatarlandis.wordpress.com/2014/02/28/firefoxiceweasel-high-cpu-usage-when-idle/ */
+    * {
+        -moz-animation: none !important;
+        animation: none !important;
+    }
+}
