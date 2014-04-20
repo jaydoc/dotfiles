@@ -1,0 +1,62 @@
+######################################
+#  file: newsbeuter config
+#  author: serdotlinecho
+#  vim: fdm=marker:ft=config:
+######################################
+
+# ----- settings {{{
+always-display-description true
+# browser "chromium %u 2> /dev/null &"
+#browser "firefox -new-tab %u 2> /dev/null &"
+browser "iceweasel -new-tab %u 2> /dev/null &"
+# browser "dwb %u 2> /dev/null &"
+display-article-progress yes
+max-items 100
+external-url-viewer "urlview"
+goto-first-unread yes
+ignore-mode "display"
+refresh-on-startup yes
+auto-reload no
+reload-time 30
+notify-format "RSS: New %d Unread %n"
+notify-program "notify-send"
+notify-always yes
+
+# }}}
+# ----- colors {{{
+# solarized
+#color background        color12 color8
+#color listnormal        default default
+color listfocus         color255 color32 bold
+color listnormal_unread color255 default
+color listfocus_unread  color255 color32 bold
+color info              color4 color0 bold
+#color article           default default
+
+highlight article "^Feed: .*$" color3 default
+highlight article "^Title: .*$" color13 default bold
+highlight article "^Author: .*$" color5 default
+highlight article "^Link: .*$" color6 default
+highlight article "^Date: .*$" color4 default
+
+# }}}
+# ----- podbeuter {{{
+download-path "~/Downloads/%n"
+max-downloads 2
+player "mpv"
+
+# }}}
+# ----- key bindings {{{
+bind-key k      prev-unread
+bind-key j      next-unread
+bind-key <esc>k prev-feed
+bind-key <esc>j next-feed
+bind-key J      next
+bind-key K      prev
+bind-key h      pageup
+bind-key l      pagedown
+bind-key o      open-in-browser
+bind-key O      open-in-browser-and-mark-read
+bind-key SPACE  toggle-article-read
+
+# }}}
