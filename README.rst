@@ -1,22 +1,6 @@
 Screenshots
 ===========
 
-Awesomewm with no titlebar
---------------------------
-.. image:: http://i.imgur.com/bmN2V0d.png
-
-Awesomewm with titlebar
------------------------
-.. image:: http://i.imgur.com/nqrXSW7.png
-
-Awesomewm with top and bottom bar
----------------------------------
-.. image:: http://i.imgur.com/XEH774F.png
-
-i3lock
-------
-.. image:: http://i.imgur.com/AOZK6k6.png
-
 Awesomewm with solarized colorscheme
 ------------------------------------
 .. image:: http://i.imgur.com/6k6Q3e0.png
