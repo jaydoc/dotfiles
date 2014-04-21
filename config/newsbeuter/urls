@@ -1,9 +1,11 @@
+http://feeds2.feedburner.com/wordpress/wxgk Wallpaper
+https://www.archlinux.org/feeds/news/ Arch
 https://www.archlinux.org/feeds/packages/i686/core/ Arch
 https://www.archlinux.org/feeds/packages/i686/extra/ Arch
 https://www.archlinux.org/feeds/packages/i686/community/ Arch
 https://parabolagnulinux.org/feeds/packages/i686/libre/ Arch
 https://www.archlinux.org/feeds/packages/i686/testing/ Arch
-https://www.archlinux.org/feeds/news/ Arch
+http://www.reddit.com/r/archlinux/.rss Arch
 https://bitbucket.org/portix/dwb/rss dwb
 http://code.google.com/feeds/p/vimperator-labs/hgchanges/basic Vimperator
 http://allanmcrae.com/feed/ Arch
@@ -14,7 +16,6 @@ http://snott.net/feed/ Arch
 http://chneukirchen.org/blog/index.atom Arch
 http://www.archlinuxuser.com/feeds/posts/default Arch
 http://linuxtidbits.wordpress.com/feed/ Arch
-http://www.reddit.com/r/archlinux/.rss Arch
 https://www.kernel.org/feeds/kdist.xml Linux
 http://ck-hack.blogspot.com/feeds/posts/default Linux
 http://feeds2.feedburner.com/Command-line-fu Linux
