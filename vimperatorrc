@@ -35,6 +35,9 @@ set! browser.tabs.animate=false
 " donottrack
 set! privacy.donottrackheader.enabled=true
 
+" ask where to download files
+set! browser.download.useDownloadDir=false
+
 " always show http
 set! browser.urlbar.trimURLs=false
 
