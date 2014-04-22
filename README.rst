@@ -3,7 +3,7 @@ Screenshots
 
 Awesomewm with solarized colorscheme
 ------------------------------------
-.. image:: http://i.imgur.com/6k6Q3e0.png
+.. image:: http://i.imgur.com/cosdbf9.png
 
 License
 -------
