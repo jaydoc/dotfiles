@@ -41,7 +41,7 @@ altkey      = "Mod1"
 terminal    = "urxvtc"
 editor      = os.getenv("EDITOR") or "nano"
 editor_cmd  = terminal .. " -e " .. editor
-volume      = terminal .. " -name 'alsamixer' -e alsamixer -c 0"
+vol         = terminal .. " -g 95x20-5+20 -e alsamixer -c 0"
 fm_cli      = terminal .. " -name 'ranger' -e ranger"
 ncm         = terminal .. " -name 'ncmpcpp' -e ncmpcpp"
 
@@ -53,7 +53,7 @@ home = os.getenv("HOME")
 confdir = home .. "/.config/awesome"
 themes = confdir .. "/themes"
 
--- Load active themes
+-- Load theme
 active_theme = themes .. "/solarized-powerarrow"
 beautiful.init(active_theme .. "/theme.lua")
 
@@ -70,6 +70,14 @@ local layouts = {
 }
 -- }}}
 
+-- {{{ Wallpaper
+if beautiful.wallpaper then
+    for s = 1, screen.count() do
+        gears.wallpaper.maximized(beautiful.wallpaper, s, true)
+    end
+end
+-- }}}
+
 -- {{{ Tag list
 tags = {
     names = { "Ƅ", "ƀ", "Ɵ", "ƈ", "Ɗ" },
@@ -77,14 +85,6 @@ tags = {
 }
 for s = 1, screen.count() do
     tags[s] = awful.tag(tags.names, s, tags.layout)
-end
--- }}}
-
--- {{{ Wallpaper
-if beautiful.wallpaper then
-    for s = 1, screen.count() do
-        gears.wallpaper.maximized(beautiful.wallpaper, s, true)
-    end
 end
 -- }}}
 
@@ -120,12 +120,9 @@ myawesomemenu = {
 mymainmenu = awful.menu({ items = { { "awesome", myawesomemenu, beautiful.awesome_icon },
                                     { "ncmpcpp", ncm },
                                     { "ranger", fm_cli },
-                                    { "alsamixer", volume}
+                                    { "alsamixer", vol}
                                   }
-                        })
-
-mylauncher = awful.widget.launcher({ image = beautiful.awesome_icon,
-                                     menu = mymainmenu })
+})
 
 -- Menubar configuration
 -- menubar.utils.terminal = terminal -- Set the terminal for applications that require it
@@ -148,6 +145,7 @@ lain.widgets.calendar:attach(mytextclock, { font_size = 8 })
 
 -- Volume
 volicon = wibox.widget.imagebox(beautiful.widget_vol)
+volicon:buttons(awful.util.table.join(awful.button({ }, 1, function () awful.util.spawn_with_shell(vol) end )))
 volumewidget = lain.widgets.alsa({
     settings = function()
         if volume_now.status == "off" then
@@ -170,6 +168,7 @@ volumewidget = lain.widgets.alsa({
 })
 
 -- Battery
+-- battery path /sys/class/power_supply/
 baticon = wibox.widget.imagebox(beautiful.widget_battery)
 batwidget = wibox.widget.background(lain.widgets.bat({
     battery = "BAT1",
@@ -260,6 +259,7 @@ mpdwidget = lain.widgets.mpd({
 })
 
 -- Separators
+spr = wibox.widget.textbox('<span font="Tamsyn 4"> </span>')
 arr0 = wibox.widget.imagebox()
 arr0:set_image(beautiful.arr0)
 arr1 = wibox.widget.imagebox()
@@ -344,7 +344,7 @@ for s = 1, screen.count() do
 
     -- Widgets that are aligned to the left
     local left_layout = wibox.layout.fixed.horizontal()
-    -- left_layout:add(mylauncher)
+    left_layout:add(spr)
     left_layout:add(mytaglist[s])
     -- left_layout:add(mypromptbox[s])
     left_layout:add(arr2)
