@@ -602,6 +602,8 @@ awful.rules.rules = {
     -- floating apps
     { rule_any = { class = {"mpv", "MPlayer", "pinentry", "feh", "Vlc"} },
       properties = { floating = true } },
+    { rule = { name = "alsamixer" },
+      properties = { floating = true } },
     -- apps tags
     { rule = { class = "Iceweasel" },
       properties = { tag = tags[1][2] } },
