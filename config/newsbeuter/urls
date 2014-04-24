@@ -6,8 +6,13 @@ https://www.archlinux.org/feeds/packages/i686/community/ Arch
 https://parabolagnulinux.org/feeds/packages/i686/libre/ Arch
 https://www.archlinux.org/feeds/packages/i686/testing/ Arch
 http://www.reddit.com/r/archlinux/.rss Arch
+http://www.reddit.com/r/linux/.rss Linux
+http://www.reddit.com/r/linuxactionshow/.rss Linux
+http://www.reddit.com/r/unixporn/.rss Linux
+http://www.reddit.com/r/dmenu/.rss Linux
 https://bitbucket.org/portix/dwb/rss dwb
 http://code.google.com/feeds/p/vimperator-labs/hgchanges/basic Vimperator
+http://www.phoronix.com/rss.php Linux
 http://allanmcrae.com/feed/ Arch
 http://jasonwryan.com/atom.xml Arch
 http://blog.notfoss.com/rss.xml Arch
@@ -19,10 +24,6 @@ http://linuxtidbits.wordpress.com/feed/ Arch
 https://www.kernel.org/feeds/kdist.xml Linux
 http://ck-hack.blogspot.com/feeds/posts/default Linux
 http://feeds2.feedburner.com/Command-line-fu Linux
-http://www.reddit.com/r/linux/.rss Linux
-http://www.reddit.com/r/linuxactionshow/.rss Linux
-http://www.reddit.com/r/unixporn/.rss Linux
-http://www.reddit.com/r/dmenu/.rss Linux
 http://inconsolation.wordpress.com/feed/ Linux
 http://feeds.feedburner.com/YJLv Linux
 http://feeds.feedburner.com/LukasZapletal Linux
