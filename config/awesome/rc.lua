@@ -483,6 +483,15 @@ globalkeys = awful.util.table.join(
             "' -p 'Run:' ")
     end),
 
+    -- passmenu
+    awful.key({ modkey, "Shift" }, "p", function ()
+    awful.util.spawn( "passmenu -i -y 16 -q -l 5 -w 350 -h 15 -nb '" .. beautiful.menu_bg_normal ..
+            "' -fn '" .. beautiful.font_alt ..
+            "' -nf '" .. beautiful.menu_fg_normal ..
+            "' -sb '" .. beautiful.menu_bg_focus ..
+            "' -p 'Passmenu:' ")
+    end),
+
     -- Tag/client switching
     awful.key({ altkey, }, "Tab", titlin),
 
