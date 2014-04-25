@@ -4,20 +4,20 @@
 ! ---------------------------------------------------
 
 ! Urxvt
-URxvt.loginShell:           true
-URxvt.cursorUnderline:      false
-URxvt.cursorBlink:          false
-URxvt.geometry:             90x24
-URxvt.urgentOnBell:         true
-URxvt.scrollBar:            false
-URxvt.scrollBar_right:      false
-URxvt.borderLess:           false
-URxvt.iso14755:             false
-URxvt.depth:                32
+URxvt*loginShell:           true
+URxvt*cursorUnderline:      false
+URxvt*cursorBlink:          false
+URxvt*geometry:             90x24
+URxvt*urgentOnBell:         true
+URxvt*scrollBar:            false
+URxvt*scrollBar_right:      false
+URxvt*borderLess:           false
+URxvt*iso14755:             false
+URxvt*depth:                32
 
 ! Colors
-#include "/home/serdotlinecho/.colors/hybrid"
-! URxvt*intensityStyles: false
+#include "/home/serdotlinecho/.colors/solarized"
+URxvt*intensityStyles: false
 
 ! Font
 Xft.dpi:        96
@@ -26,25 +26,25 @@ Xft.rgba:       rgb
 Xft.hinting:    true
 Xft.hintstyle:  hintslight
 
-URxvt.font: -misc-tamzenforpowerline-medium-r-normal--12-87-100-100-c-60-iso10646-1
-URxvt.boldFont: -misc-tamzenforpowerline-bold-r-normal--12-87-100-100-c-60-iso10646-1
+URxvt*font: -misc-tamzenforpowerline-medium-r-normal--12-87-100-100-c-60-iso10646-1
+URxvt*boldFont: -misc-tamzenforpowerline-bold-r-normal--12-87-100-100-c-60-iso10646-1
 
 ! Cursor
 Xcursor.theme: AnArchCursor-22
 
 ! Extensions
-URxvt.perl-ext-common:      url-select,clipboard,matcher,unichr
-URxvt.keysym.M-Escape:      perl:keyboard-select:activate
-URxvt.keysym.M-u:           perl:url-select:select_next
-URxvt.keysym.M-s:           perl:keyboard-select:search
-URxvt.keysym.M-c:           perl:clipboard:copy
-URxvt.keysym.M-v:           perl:clipboard:paste
-URxvt.keysym.M-C-v:         perl:clipboard:paste_escaped
-URxvt.url-select.launcher:  iceweasel
-URxvt.matcher.button:       1
+URxvt*perl-ext-common:      url-select,clipboard,matcher,unichr
+URxvt*keysym.M-Escape:      perl:keyboard-select:activate
+URxvt*keysym.M-u:           perl:url-select:select_next
+URxvt*keysym.M-s:           perl:keyboard-select:search
+URxvt*keysym.M-c:           perl:clipboard:copy
+URxvt*keysym.M-v:           perl:clipboard:paste
+URxvt*keysym.M-C-v:         perl:clipboard:paste_escaped
+URxvt*url-select.launcher:  iceweasel
+URxvt*matcher.button:       1
 
 ! Xautolock
 Xautolock.time: 10
-Xautolock.locker: lock.sh
+Xautolock.locker: i3lock-wrapper
 Xautolock.corners: -+00
 Xautolock.cornerdelay: 10
