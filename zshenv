@@ -1,11 +1,19 @@
 # setup environment
-export EDITOR="/usr/bin/vim"
+export TERM=rxvt-unicode-256color
+export EDITOR=vim
+export BLOCK_SIZE=human-readable
+# if [[ -n $TMUX ]]
+#     then
+# export TERM=screen-256color
+#     else
+# export TERM=xterm-256color
+# fi
 
-# man page colours
+# colored man
 export LESS_TERMCAP_mb=$'\E[01;31m'
-export LESS_TERMCAP_md=$'\E[01;35m'
+export LESS_TERMCAP_md=$'\E[01;31m'
 export LESS_TERMCAP_me=$'\E[0m'
 export LESS_TERMCAP_se=$'\E[0m'
-export LESS_TERMCAP_so=$'\E[31m'
+export LESS_TERMCAP_so=$'\E[01;44;33m'
 export LESS_TERMCAP_ue=$'\E[0m'
-export LESS_TERMCAP_us=$'\E[01;34m'
+export LESS_TERMCAP_us=$'\E[01;32m'
