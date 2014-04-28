@@ -35,13 +35,12 @@ if $DISPLAY =~ ":"
 endif
 syntax on
 set background=dark
-let g:hybrid_use_Xresources = 1
-colorscheme hybrid
+colorscheme solarized
 
 " }}}
 " ----- vim behaviour {{{
 set wildmenu            " enhanced tab-completion shows all matching cmds in a popup menu
-set cursorline          " highlight current line
+" set cursorline          " highlight current line
 set norelativenumber    " show no relative line numbers
 set nobackup            " disable backup files (filename~)
 set noswapfile          " do not write annoying intermediate swap files
@@ -127,7 +126,7 @@ nnoremap <C-h> <C-w>h
 nnoremap <C-l> <C-w>l
 
 " NERDtree
-nmap <F1> :NERDTreeToggle<CR>
+nmap <leader>d :NERDTreeToggle<CR>
 nmap <leader>nf :NERDTreeFind<CR>
 
 " Undotree
@@ -160,7 +159,7 @@ map <F12> ggVGg?
 " }}}
 " ----- settings for plugins {{{
 " vim-airline settings
-let g:airline_theme = 'powerlineish'
+let g:airline_theme = 'solarized'
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#show_buffers = 0
 let g:airline#extensions#tabline#tab_nr_type = 1
