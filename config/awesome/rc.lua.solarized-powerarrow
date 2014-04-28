@@ -32,6 +32,19 @@ do
 end
 -- }}}
 
+-- {{{ Autostart applications
+function run_once(cmd)
+  findme = cmd
+  firstspace = cmd:find(" ")
+  if firstspace then
+     findme = cmd:sub(0, firstspace-1)
+  end
+  awful.util.spawn_with_shell("pgrep -u $USER -x " .. findme .. " > /dev/null || (" .. cmd .. ")")
+end
+
+run_once("compton")
+-- }}}
+
 -- {{{ Variable definitions
 -- Default modkey
 modkey      = "Mod4"
@@ -42,12 +55,13 @@ terminal    = "urxvtc"
 editor      = os.getenv("EDITOR") or "nano"
 editor_cmd  = terminal .. " -e " .. editor
 vol         = terminal .. " -g 95x20-5+20 -e alsamixer -c 0"
+htop        = terminal .. " -g 95x20-5+20 -e htop"
 fm_cli      = terminal .. " -name 'ranger' -e ranger"
 ncm         = terminal .. " -name 'ncmpcpp' -e ncmpcpp"
 
 base01 = "#586e75"
 base02 = "#073642"
-naughty.config.defaults.border_color = base01
+-- naughty.config.defaults.border_color = base01
 
 home = os.getenv("HOME")
 confdir = home .. "/.config/awesome"
@@ -119,8 +133,7 @@ myawesomemenu = {
 
 mymainmenu = awful.menu({ items = { { "awesome", myawesomemenu, beautiful.awesome_icon },
                                     { "ncmpcpp", ncm },
-                                    { "ranger", fm_cli },
-                                    { "alsamixer", vol}
+                                    { "ranger", fm_cli }
                                   }
 })
 
@@ -216,6 +229,7 @@ tempwidget = lain.widgets.temp({
 -- CPU
 cpuicon = wibox.widget.imagebox()
 cpuicon:set_image(beautiful.widget_cpu)
+cpuicon:buttons(awful.util.table.join(awful.button({ }, 1, function () awful.util.spawn_with_shell(htop) end )))
 cpuwidget = wibox.widget.background(lain.widgets.cpu({
     settings = function()
         widget:set_markup(markup("#cb4b16", cpu_now.usage .. "% "))
@@ -609,9 +623,9 @@ awful.rules.rules = {
     -- urxvt gaps fixes
     -- { rule = { name = "urxvt" }, properties = { size_hints_honor = false } },
     -- floating apps
-    { rule_any = { class = {"mpv", "MPlayer", "pinentry", "feh", "Vlc"} },
+    { rule_any = { class = {"MPlayer", "mpv", "pinentry", "feh", "Vlc"} },
       properties = { floating = true } },
-    { rule = { name = "alsamixer" },
+    { rule_any = { name = {"alsamixer", "htop"} },
       properties = { floating = true } },
     -- apps tags
     { rule = { class = "Iceweasel" },
