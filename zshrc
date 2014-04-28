@@ -7,8 +7,8 @@ autoload -U colors && colors
 zmodload -i zsh/complist
 
 # Prompt
-PROMPT="┌─[%{$fg[blue]%} %~ %{$reset_color%}]
-└─╼ "
+PROMPT="%{$fg[cyan]%}%n %{$fg_bold[blue]%}%~%{$reset_color%}
+» "
 
 # Vi style
 bindkey -v
@@ -18,7 +18,7 @@ KEYTIMEOUT=1
 function zle-line-init zle-keymap-select {
     VIM_PROMPT="%{$fg_bold[yellow]%} [% NORMAL]% %{$reset_color%}"
     RPS1="${${KEYMAP/vicmd/$VIM_PROMPT}/(main|viins)/}"
-    RPS2=$RPS1
+    RPS2="$RPS1"
     zle reset-prompt
 }
 
