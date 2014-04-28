@@ -3,7 +3,6 @@ https://www.archlinux.org/feeds/news/ Arch
 https://www.archlinux.org/feeds/packages/i686/core/ Arch
 https://www.archlinux.org/feeds/packages/i686/extra/ Arch
 https://www.archlinux.org/feeds/packages/i686/community/ Arch
-https://parabolagnulinux.org/feeds/packages/i686/libre/ Arch
 https://www.archlinux.org/feeds/packages/i686/testing/ Arch
 http://www.reddit.com/r/archlinux/.rss Arch
 http://www.reddit.com/r/linux/.rss Linux
@@ -27,7 +26,6 @@ http://feeds2.feedburner.com/Command-line-fu Linux
 http://inconsolation.wordpress.com/feed/ Linux
 http://feeds.feedburner.com/YJLv Linux
 http://feeds.feedburner.com/LukasZapletal Linux
-http://box.matto.nl/index.rss Linux
 http://www.insanitybit.com/feed/ Linux
 http://dailyvim.blogspot.com/feeds/posts/default Vim
 http://jessture.com/feed/ Geek
