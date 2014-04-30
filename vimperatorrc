@@ -7,7 +7,7 @@
 " ----- general settings {{{
 colorscheme solarized_dark
 set gui=nonavigation
-set titlestring=Iceweasel
+set titlestring=Firefox
 set status=input,location,bookmark,history,position
 set defsearch=ge
 set hintchars=hjklasdfgyuiopqwertnmzxcvb
